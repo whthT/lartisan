@@ -1,6 +1,4 @@
 ﻿using CommandCore.Library;
-using System;
-using System.IO;
 using Console = Colorful.Console;
 
 namespace Lartisan

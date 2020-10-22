@@ -5,7 +5,6 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using Console = Colorful.Console;
 
 namespace Lartisan.Views
 {
@@ -57,7 +56,13 @@ namespace Lartisan.Views
             Console.WriteLine(artisanCast.GetLaravelVersion(), Color.Orange);
             Console.WriteLine(Program.version, Color.Green);
             var availableCommands = artisanCast.GetAvailableCommands();
-            Console.WriteLine(String.Join("\n", availableCommands));
+            
+            Console.Write("\nLartisan ", Color.Yellow);
+            Console.WriteLine("is waiting for you...", Color.Blue);
+            Console.Write("> ");
+            var command = Console.ReadLine();
+
+            Console.WriteLine($"Command is: {command}");
         }
     }
 }
